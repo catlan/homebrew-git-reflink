@@ -2,6 +2,7 @@ class GitReflink < Formula
   desc "Git with 'worktree add' populating new worktrees via copy-on-write clones"
   homepage "https://github.com/catlan/git/tree/worktree-reflink"
   url "https://github.com/catlan/git/archive/refs/tags/v2.56.0-reflink1.tar.gz"
+  version "2.56.0-reflink1"
   sha256 "68a11240c5c8e3bcb3fac322f48689d6e7dd066363b4da152eb1bc5e0a43a2b3"
   license all_of: [
     "GPL-2.0-only",
@@ -49,6 +50,7 @@ class GitReflink < Formula
       NO_TCLTK=1
       NO_RUST=1
       NO_PERL=1
+      GIT_VERSION=#{version}
     ]
 
     args += if OS.mac?
